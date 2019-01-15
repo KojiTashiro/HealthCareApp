@@ -1,2 +1,2 @@
 # HealthCareApp
-LaravelでHealthCareAppを作成
+LaravelでHealthCareAppをつくる
