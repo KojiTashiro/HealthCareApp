@@ -24,11 +24,9 @@
                 </tr>                
             @endif
             <tr>
-                <th>
-                    好きな名前: 
-                </th>
+                <th>好きな名前:</th>
                 <td>
-                    <input type="text" name="name" placeholder="山田　太郎" value="{{old('name')}}"> 
+                    <input type="text" class="form-control" name="name" placeholder="例)山田　太郎" value="{{old('name')}}"> 
                 </td>
             </tr>
             @if ($errors->has('age'))
@@ -42,11 +40,9 @@
                 </tr>
             @endif
             <tr>
-                <th>
-                    年齢:
-                </th>
+                <th>年齢:</th>
                 <td>
-                    <input type="text" name="age"  value="{{old('age')}}">
+                    <input type="text" class="form-control" name="age" placeholder="例)20" value="{{old('age')}}">
                 </td>
             </tr>
             @if ($errors->has('sex'))
@@ -60,11 +56,9 @@
             </tr>
             @endif
             <tr>
-                <th>
-                    性別:
-                </th>
+                <th>性別:</th>
                 <td>
-                    <select name="sex">
+                    <select class="form-control" name="sex">
                         <option value="">--</option>
                         <option value="m">男性</option>
                         <option value="f">女性</option>
@@ -82,11 +76,9 @@
                 </tr>
             @endif
             <tr>
-                <th>
-                    メールアドレス:
-                </th>
+                <th>メールアドレス:</th>
                 <td>
-                    <input type="text" name="email" placeholder="example@email.com" value="{{old('mail')}}">
+                    <input type="text" name="email" class="form-control" placeholder="例)example@email.com" value="{{old('email')}}">
                 </td>
             </tr>
             @if ($errors->has('password'))
@@ -100,11 +92,9 @@
                 </tr>
             @endif
             <tr>
-                <th>
-                    パスワード:
-                </th>
+                <th>パスワード:</th>
                 <td>
-                    <input type="text" name="password" placeholder="最低6文字以上" value="{{old('password')}}">
+                    <input type="text" name="password" class="form-control" placeholder="最低6文字以上" value="{{old('password')}}">
                 </td>
             </tr>
             @if ($errors->has('password'))
@@ -118,17 +108,15 @@
                 </tr>
             @endif
             <tr>
-                <th>
-                    パスワード(確認):
-                </th>
+                <th>パスワード(確認):</th>
                 <td>
-                    <input type="text" name="password_confirmation" value="{{old('password_confirmation')}}"> 
+                    <input type="text" name="password_confirmation" class="form-control" value="{{old('password_confirmation')}}"> 
                 </td>
             </tr>
             <tr>
                 <th></th>
                 <td>
-                    <input type="submit" value="送信">|<a href="/home">ホーム</a>
+                    <input type="submit" class="btn btn-default" value="送信"><a href="/home" class="btn btn-default">ホーム</a>
                 </td>
             </tr>
         </form>
