@@ -26,7 +26,7 @@
             <tr>
                 <th>名前:</th>
                 <td>
-                    <input type="text" name="name" placeholder="山田　太郎" value="{{old('name')}}">
+                    <input type="text" name="name" class="form-control" placeholder="例)山田　太郎" value="{{old('name')}}">
                 </td>
             </tr>
             @if ($errors->has('email'))
@@ -40,11 +40,9 @@
             </tr>
         @endif
         <tr>
-            <th>
-                メールアドレス:
-            </th>
+            <th>メールアドレス:</th>
             <td>
-                <input type="text" name="email" placeholder="example@email.com" value="{{old('email')}}">
+                <input type="text" name="email" class="form-control" placeholder="例)example@email.com" value="{{old('email')}}">
             </td>
         </tr>
         @if ($errors->has('password'))
@@ -58,17 +56,15 @@
             </tr>
         @endif
         <tr>
-            <th>
-                パスワード:
-            </th>
+            <th>パスワード:</th>
             <td>
-                <input type="text" name="password" placeholder="最低6文字以上" value="{{old('password')}}">
+                <input type="text" name="password" class="form-control" placeholder="例)最低6文字以上" value="{{old('password')}}">
             </td>
         </tr>
         <tr>
             <th></th>
             <td>
-                <input type="submit" value="ログイン">|<a href="/home">ホーム</a>
+                <input type="submit" class="btn btn-default" value="ログイン"><a href="/home" class="btn btn-default">ホーム</a>
             </td>
         </tr>
         </form>
