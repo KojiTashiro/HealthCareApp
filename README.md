@@ -1,2 +1,0 @@
-# HealthCareApp
-LaravelでHealthCareAppをつくる
