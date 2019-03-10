@@ -4,9 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\TheNecessaryNutrientOldWoman;
-use App\TheNecessaryNutrientYoungWoman;
-use App\TheNecessaryNutrientYoungMan;
+use App\TheNecessaryNutrientManFrom15To17YearsOld;
+use App\TheNecessaryNutrientManFrom18To29YearsOld;
+use App\TheNecessaryNutrientManFrom30To49YearsOld;
+use App\TheNecessaryNutrientManFrom50To69YearsOld;
+use App\TheNecessaryNutrientManOver70YearsOld;
+use App\TheNecessaryNutrientWomanFrom15To17YearsOld;
+use App\TheNecessaryNutrientWomanFrom18To29YearsOld;
+use App\TheNecessaryNutrientWomanFrom30To49YearsOld;
+use App\TheNecessaryNutrientWomanFrom50To69YearsOld;
+use App\TheNecessaryNutrientWomanOver70YearsOld;
 use App\UserSelectedFood;
 use App\RiceProduct;
 use App\User;
@@ -22,19 +29,37 @@ class HomeController extends Controller
         } else {
         //性別と年齢で条件分岐
             if (\Auth::user()->sex == 'm') {
+                if (\Auth::user()->age >= 15 && \Auth::user()->age <= 17) {
+                    $required_data = TheNecessaryNutrientManFrom15To17YearsOld::all();
+                }
                 if (\Auth::user()->age >= 18 && \Auth::user()->age <= 29) {
-                    $required_data = TheNecessaryNutrientYoungMan::all();
-                    $RequiredData = new TheNecessaryNutrientYoungMan;
+                    $required_data = TheNecessaryNutrientManFrom18To29YearsOld::all();
+                }
+                if (\Auth::user()->age >= 30 && \Auth::user()->age <= 49) {
+                    $required_data = TheNecessaryNutrientManFrom30To49YearsOld::all();
+                }
+                if (\Auth::user()->age >= 50 && \Auth::user()->age <= 69) {
+                    $required_data = TheNecessaryNutrientManFrom50To69YearsOld::all();
+                }
+                if (\Auth::user()->age >= 70) {
+                    $required_data = TheNecessaryNutrientManOver70YearsOld::all();
                 }
             }
             if (\Auth::user()->sex == 'f') {
+                if (\Auth::user()->age >= 15 && \Auth::user()->age <= 17) {
+                    $required_data = TheNecessaryNutrientWomanFrom15To17YearsOld::all();
+                }
                 if (\Auth::user()->age >= 18 && \Auth::user()->age <= 29) {
-                    $required_data = TheNecessaryNutrientYoungWoman::all();
-                    $RequiredData = new TheNecessaryNutrientYoungWoman;
+                    $required_data = TheNecessaryNutrientWomanFrom18To29YearsOld::all();
                 }
                 if (\Auth::user()->age >= 30 && \Auth::user()->age <= 49) {
-                    $required_data = TheNecessaryNutrientOldWoman::all();
-                    $RequiredData = new TheNecessaryNutrientOldWoman;
+                    $required_data = TheNecessaryNutrientWomanFrom30To49YearsOld::all();
+                }
+                if (\Auth::user()->age >= 50 && \Auth::user()->age <= 69) {
+                    $required_data = TheNecessaryNutrientWomanFrom50To69YearsOld::all();
+                }
+                if (\Auth::user()->age >= 70) {
+                    $required_data = TheNecessaryNutrientWomanOver70YearsOld::all();
                 }
             }
 
