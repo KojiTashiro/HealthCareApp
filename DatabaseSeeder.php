@@ -15,11 +15,18 @@ class DatabaseSeeder extends Seeder
             CurryTableSeeder::class,
             FoodsCategoryTableSeeder::class,
             RiceTableSeeder::class,
-            TheNecessaryNutrientsOldWomenTableSeeder::class,
-            TheNecessaryNutrientsYoungMenTableSeeder::class,
-            TheNecessaryNutrientsYoungMenTableSeeder::class,
-            TheNecessaryNutrientsYoungWomenTableSeeder::class,
             SoySourceRamenTableSeeder::class,
+            TheNecessaryNutrientsMenFrom15To17YearsOldTableSeeder::class,
+            TheNecessaryNutrientsMenFrom18To29YearsOldTableSeeder::class,
+            TheNecessaryNutrientsMenFrom30To49YearsOldTableSeeder::class,
+            TheNecessaryNutrientsMenFrom50To69YearsOldTableSeeder::class,
+            TheNecessaryNutrientsMenOver70YearsOldTableSeeder::class,
+            TheNecessaryNutrientsWomenFrom15To17YearsOldTableSeeder::class,
+            TheNecessaryNutrientsWomenFrom18To29YearsOldTableSeeder::class,
+            TheNecessaryNutrientsWomenFrom30To49YearsOldTableSeeder::class,
+            TheNecessaryNutrientsWomenFrom50To69YearsOldTableSeeder::class,
+            TheNecessaryNutrientsWomenOver70YearsOldTableSeeder::class,
+
             ]);
     }
 }
